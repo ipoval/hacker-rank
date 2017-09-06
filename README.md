@@ -1,5 +1,4 @@
 # hacker-rank
-hacker-rank
 
 ```bash
 bash FractalTrees.bash
