@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-((rows=63));
-((startIdx=0));
-((endIdx=100));
-((branchHight=16));
+(( rows = 63 ));
+(( startIdx = 0 ));
+(( endIdx = 100 ));
+(( branchHight = 16 ));
 (( treeHight = 0 ));
-((root=(endIdx - startIdx) / 2 - 1));
-ROOTS=(); # array
+(( root = (endIdx - startIdx) / 2 - 1 ));
+
+ROOTS=();
 ROOTS+=($root);
 
 drawVerticalBranches() {
@@ -21,11 +22,11 @@ drawVerticalBranches() {
 					character="1";
 					break;
 				else
-					character="_"
+					character="_";
 				fi
 			done
 
-			line="${line}${character}"
+			line="${line}${character}";
 		done
 
 		line="${line}\n";
@@ -49,7 +50,7 @@ drawDiagonalBranches() {
 				fi
 			done
 
-			line="${line}${character}"
+			line="${line}${character}";
 		done
 
 		line="${line}\n";
@@ -63,8 +64,8 @@ drawUnfilledLines() {
 		line="";
 
 		for (( j=$startIdx;  j < $endIdx; j++ )); do
-			character="_"
-			line="${line}${character}"
+			character="_";
+			line="${line}${character}";
 		done
 
 		line="${line}\n";
